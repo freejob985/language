@@ -7,9 +7,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(''),
-      ),
+      // appBar: AppBar(
+      //   title: const Text(''),
+      // ),
       body: Scaffold(
           backgroundColor: Color(0xFFFFFFFF),
           appBar: AppBar(
@@ -18,18 +18,30 @@ class HomePage extends StatelessWidget {
           body: Column(
             children: [
               Category(
+                onTap: () {
+                  print("Numbers");
+                },
                 text: "Numbers",
                 color: Color(0xffEF9235),
               ),
               Category(
+                onTap: () {
+                  print("FamilyMembers");
+                },
                 text: "FamilyMembers",
                 color: Color(0xff558B37),
               ),
               Category(
+                onTap: () {
+                  print("Colors");
+                },
                 text: "Colors",
                 color: Color(0xff79359F),
               ),
               Category(
+                onTap: () {
+                  print("Phrases");
+                },
                 text: "Phrases",
                 color: Color(0xff50ADC7),
               )
