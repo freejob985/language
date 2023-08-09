@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:language/components/Category.dart';
 
+import 'numbers_page.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({key}) : super(key: key);
 
@@ -19,7 +21,9 @@ class HomePage extends StatelessWidget {
             children: [
               Category(
                 onTap: () {
-                  print("Numbers");
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return NumbersPage();
+                  }));
                 },
                 text: "Numbers",
                 color: Color(0xffEF9235),
