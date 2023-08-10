@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:language/models/number.dart';
 
@@ -35,7 +36,15 @@ class Item extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 40),
             child: GestureDetector(
-              onTap: () => print("test"),
+              onTap: () {
+                try {
+                  AudioCache player =
+                      AudioCache(prefix: 'assets/sounds/numbers/');
+                  player.play(number.sound);
+                } catch (e) {
+                  print(e);
+                }
+              },
               child: Icon(
                 Icons.play_arrow,
                 color: Colors.white,
