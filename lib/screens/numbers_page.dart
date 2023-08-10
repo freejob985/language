@@ -77,19 +77,21 @@ class NumbersPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('NumbersPage'),
       ),
-      body: ListView(
-        children: [
-          Item(number: numbers[0]),
-          Item(number: numbers[1]),
-          Item(number: numbers[2]),
-          Item(number: numbers[3]),
-          Item(number: numbers[4]),
-          Item(number: numbers[5]),
-          Item(number: numbers[6]),
-          Item(number: numbers[7]),
-          Item(number: numbers[8]),
-        ],
+      body: ListView.builder(
+        itemCount: numbers.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Item(number: numbers[index]);
+        },
       ),
     );
   }
+
+  // List<Widget> getList(List<Item> numbers) {
+  //   List<Widget> itemsList = [];
+  //   for (int i = 0; i < numbers.length; i++) {
+  //     itemsList.add(numbers[i]);
+  //   }
+
+  //   return itemsList;
+  // }
 }

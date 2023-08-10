@@ -34,10 +34,13 @@ class Item extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(right: 40),
-            child: Icon(
-              Icons.play_arrow,
-              color: Colors.white,
-              size: 32,
+            child: GestureDetector(
+              onTap: () => print("test"),
+              child: Icon(
+                Icons.play_arrow,
+                color: Colors.white,
+                size: 32,
+              ),
             ),
           ),
         ],
